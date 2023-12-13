@@ -32,7 +32,7 @@ async function api(method: string, path: string, body?: any) {
 }
 
 export async function complete(args: any) {
-  return await api("POST", "/chatt/completions", args);
+  return await api("POST", "/chat/completions", args);
 }
 
 export async function createEmbeddings(args: any) {
