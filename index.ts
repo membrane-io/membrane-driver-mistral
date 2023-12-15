@@ -16,7 +16,7 @@ export async function configure({ apiKey }) {
 }
 
 async function api(method: string, path: string, body?: any) {
-  const response = await fetch(`https://api.mistral.ai/v1/${path}`, {
+  const response: any = await fetch(`https://api.mistral.ai/v1/${path}`, {
     method,
     headers: {
       "content-type": "application/json",

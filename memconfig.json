@@ -110,5 +110,7 @@
       }
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "http": "http:"
+  }
 }
