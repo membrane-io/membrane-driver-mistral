@@ -106,7 +106,7 @@
             "description": "The available Mistral models."
           }
         ],
-        "description": "A driver for integrating with the Mistral API for natural language processing."
+        "description": "A driver for integrating with the Mistral API"
       }
     ]
   },
