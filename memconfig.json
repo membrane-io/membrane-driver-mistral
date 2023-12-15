@@ -12,7 +12,8 @@
                 "name": "apiKey",
                 "type": "String"
               }
-            ]
+            ],
+            "description": "Configures the Mistral API integration with the provided API key."
           },
           {
             "name": "complete",
@@ -21,17 +22,17 @@
               {
                 "name": "model",
                 "type": "String",
-                "description": "ID of the model to use."
+                "description": "ID of the Mistral model to use."
               },
               {
                 "name": "messages",
                 "type": "Json",
-                "description": "The prompt(s) to generate completions for, encoded as a list of dict with role and content."
+                "description": "The prompt(s) to generate completions for, encoded as a list of dictionaries with role and content."
               },
               {
                 "name": "temperature",
                 "type": "Float",
-                "description": "What sampling temperature to use, between 0.0 and 1.0.",
+                "description": "The sampling temperature to use, between 0.0 and 1.0.",
                 "optional": true
               },
               {
@@ -64,17 +65,18 @@
                 "description": "An optional integer seed to use for random sampling.",
                 "optional": true
               }
-            ]
+            ],
+            "description": "Generates completions for the given prompt using the Mistral model."
           },
           {
             "name": "createEmbeddings",
             "type": "Json",
-            "description": "Create embeddings for a list of texts.",
+            "description": "Creates embeddings for a list of texts using the specified Mistral model.",
             "params": [
               {
                 "name": "model",
                 "type": "String",
-                "description": "ID of the model to use.",
+                "description": "ID of the Mistral model to use.",
                 "optional": false
               },
               {
@@ -95,13 +97,16 @@
         "fields": [
           {
             "name": "status",
-            "type": "String"
+            "type": "String",
+            "description": "The status of the Mistral driver."
           },
           {
             "name": "models",
-            "type": "Json"
+            "type": "Json",
+            "description": "The available Mistral models."
           }
-        ]
+        ],
+        "description": "A driver for integrating with the Mistral API for natural language processing."
       }
     ]
   },
