@@ -32,7 +32,7 @@ async function api(method: string, path: string, body?: any) {
 }
 
 export async function complete({ prompt, ...args }) {
-  const model: string = args.model ?? "mistral-tiny";
+  const model: string = args.model ?? "mistral-small";
   const res = await api("POST", "chat/completions", {
     model,
     messages: [{ content: prompt, role: "user" }],
