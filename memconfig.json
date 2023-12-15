@@ -17,17 +17,18 @@
           },
           {
             "name": "complete",
-            "type": "Json",
+            "type": "String",
             "params": [
               {
                 "name": "model",
                 "type": "String",
-                "description": "ID of the Mistral model to use."
+                "description": "ID of the Mistral model to use.",
+                "optional": true
               },
               {
-                "name": "messages",
-                "type": "Json",
-                "description": "The prompt(s) to generate completions for, encoded as a list of dictionaries with role and content."
+                "name": "prompt",
+                "description": "The prompt to generate completions for.",
+                "type": "String"
               },
               {
                 "name": "temperature",

@@ -31,16 +31,23 @@ async function api(method: string, path: string, body?: any) {
   return await response.json();
 }
 
-export async function complete(args: any) {
-  return await api("POST", "/chat/completions", args);
+export async function complete({ prompt, ...args }) {
+  const model: string = args.model ?? "mistral-tiny";
+  const res = await api("POST", "chat/completions", {
+    model,
+    messages: [{ content: prompt, role: "user" }],
+    ...args,
+  });
+
+  return res.choices[0].message.content;
 }
 
 export async function createEmbeddings(args: any) {
-  return await api("POST", "/embeddings", args);
+  return await api("POST", "embeddings", args);
 }
 
 export const Root = {
   models: async () => {
-    return await api("GET", "/models");
+    return await api("GET", "models");
   },
 };
