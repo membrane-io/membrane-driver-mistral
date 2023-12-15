@@ -21,7 +21,7 @@ async function api(method: string, path: string, body?: any) {
     headers: {
       "content-type": "application/json",
       accept: "application/json",
-      Authorization: "Bearer {state.apiKey}",
+      Authorization: `Bearer ${state.apiKey}`,
     },
     body: JSON.stringify(body),
   });
